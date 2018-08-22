@@ -7,12 +7,7 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  int counter = 0;
-
-  void fetchImage() async {
-    counter++;
-  }
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   Widget build(context){
     //must define a 'build' method that returns
@@ -20,8 +15,15 @@ class AppState extends State<App> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Meme it up fam!'),
-          backgroundColor: Color.fromRGBO(13, 6, 40, 100.0),
+          title: Text('Snuzit'),
+          backgroundColor: Color.fromRGBO(13, 6, 40, 0.0),
+          elevation: 0.0,
+          leading: new IconButton(
+            icon: new Icon(Icons.clear_all),
+            tooltip: 'View menu side bar',
+            onPressed: () => _scaffoldKey.currentState.openDrawer(),
+            splashColor: Color.fromRGBO(0, 0, 0, 30.0),
+          ),
         ),
         backgroundColor: Color.fromRGBO(249, 219, 189, 95.0),
       ),

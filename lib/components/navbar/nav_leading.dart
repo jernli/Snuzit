@@ -1,32 +1,44 @@
 import 'package:flutter/material.dart';
 
-class leading extends State<AppState> {
+class LeadingDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      drawer: new Drawer(
-          child: new ListView(
-            children: <Widget> [
-              new DrawerHeader(child: new Text('Header'),),
-              new ListTile(
-                title: new Text('First Menu Item'),
-                onTap: () {},
+    print("Im loaded!");
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader(
+              child: Text("hi 🐜"),
+              decoration: BoxDecoration(
+                color: Colors.orangeAccent,
               ),
-              new ListTile(
-                title: new Text('Second Menu Item'),
-                onTap: () {},
-              ),
-              new Divider(),
-              new ListTile(
-                title: new Text('About'),
-                onTap: () {},
-              ),
-            ],
-          )
-      ),
-      body: new Center(
-        child: new Text(
-          'Center',
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Title'),
+              onTap: () {
+                Navigator.pop(context);
+                print('Title');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.subject),
+              title: Text('Science Behind'),
+              onTap: () {
+                Navigator.pop(context);
+                print('Science Behind');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.info),
+              title: Text('Info'),
+              onTap: () {
+                Navigator.pop(context);
+                print('info');
+              },
+            ),
+          ],
         ),
       ),
     );

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class LeadingDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print("Im loaded!");
-    return Scaffold(
-      drawer: Drawer(
+    print('Im loaded');
+    return Drawer(
         child: ListView(
+          padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
               child: Text("hi 🐜"),
@@ -40,7 +40,6 @@ class LeadingDrawer extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }

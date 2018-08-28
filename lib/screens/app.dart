@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components//navbar/nav_leading.dart';
+import '../components/navbar/nav_leading.dart';
 
 class App extends StatefulWidget {
   createState() {
@@ -21,7 +21,7 @@ class AppState extends State<App> {
           elevation: 0.0,
           leading: IconButton(
               icon: Icon(Icons.clear_all),
-              onPressed: () => _scaffoldKey.currentState.openDrawer(),
+              onPressed: () {_scaffoldKey.currentState.openDrawer();},
           ),
         ),
         backgroundColor: Color.fromRGBO(249, 219, 189, 95.0),

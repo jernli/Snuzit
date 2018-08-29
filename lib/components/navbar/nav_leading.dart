@@ -32,12 +32,18 @@ class LeadingDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.info),
-              title: Text('Info'),
+              title: Text('Contact Us'),
               onTap: () {
                 Navigator.pop(context);
-                print('info');
+                print('Contact Us');
               },
             ),
+            new Divider(),
+            ListTile(
+              title: Text('Build with Flutter'),
+              trailing: Icon(Icons.build),
+              subtitle: Text('version 1.2'),
+            )
           ],
         ),
     );

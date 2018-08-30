@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/navbar/nav_leading.dart';
+import '../components/body/body_music.dart';
 
 class App extends StatefulWidget {
   createState() {
@@ -25,6 +26,8 @@ class AppState extends State<App> {
           ),
         ),
         backgroundColor: Color.fromRGBO(249, 219, 189, 95.0),
+        body: BodyMusic(),
+
       ),
     );
   }
